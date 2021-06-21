@@ -7,12 +7,6 @@
 <h4 align="center">A RedisDB Wrapper for FiveM</h4>
 
 <p align="center">
-
-[![Core Language](https://img.shields.io/badge/Core-Javascript-yellow.svg?style=for-the-badge&logo=javascript)](#) [![Cache](https://img.shields.io/badge/Cache-Redis-red.svg?style=for-the-badge&logo=redis)](#)
-
-</p>
-
-<p align="center">
   <a href="#API">API</a> •
   <a href="#Documentation">Documentation</a> •
   <a href="#License">License</a> •
