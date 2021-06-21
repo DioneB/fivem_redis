@@ -4,7 +4,7 @@
 
 </h1>
 
-<h4 align="center">A RedisDB Wrapper for FiveM built in :brazil: with :green_heart: using</h4>
+<h4 align="center">A RedisDB Wrapper for FiveM</h4>
 
 <p align="center">
 
