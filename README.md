@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="#API">API</a> •
-  <a href="#Install">Install</a> •
+  <a href="#Wiki">Wiki</a> •
   <a href="#License">License</a> •
   <a href="#Roadmap">Roadmap</a> •
   <a href="#Contribute">Contribute</a>
@@ -46,7 +46,7 @@ end)
 
 
 
-## Install
+## Wiki
 
 - See [Install Instructions](https://github.com/Santagain/fivem_redis/wiki) for detailed Instructions for install Redis & RediSearch.
 
