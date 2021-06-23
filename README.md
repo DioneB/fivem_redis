@@ -48,7 +48,7 @@ end)
 
 ## Wiki
 
-- See [Install Instructions](https://github.com/Santagain/fivem_redis/wiki) for detailed Instructions for install Redis & RediSearch.
+- See [Install Instructions](https://github.com/Santagain/fivem_redis/wiki) for detailed Instructions for install and use of Redis & RediSearch.
 
 ## Roadmap
 
