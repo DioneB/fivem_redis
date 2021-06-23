@@ -12,7 +12,7 @@ function Callback(cb, ...args) {
   else return false;
 }
 
-function saveCache(key, value) {
+function SaveCache(key, value) {
   return Redis.set(key, JSON.stringify(value));
 }
 
@@ -26,26 +26,26 @@ async function GetAllCache(cb) {
   Callback(cb, data ? data : null);
 }
 
-function invalidateCache(key) {
+function InvalidateCache(key) {
   return Redis.del(key);
 }
 
-async function invalidatePrefixCache(prefix, cb) {
+async function InvalidatePrefixCache(prefix, cb) {
   const keys = await Redis.keys(`${prefix}:*`);
   Callback(cb, Redis.del(keys));
 }
 
 let Cache = {};
-Cache.saveCache = saveCache;
-Cache.Invalidate = invalidateCache;
-Cache.GetCache = (key, cb) => {
+Cache.Save = SaveCache;
+Cache.Invalidate = InvalidateCache;
+Cache.Get = (key, cb) => {
   return GetCache(key, cb);
 };
-Cache.GetAllCache = (cb) => {
+Cache.GetAll = (cb) => {
   return GetAllCache(cb);
 };
-Cache.invalidatePrefixCache = (cb) => {
-  return invalidatePrefixCache(cb);
+Cache.InvalidatePrefix = (prefix, cb) => {
+  return InvalidatePrefixCache(prefix, cb);
 };
 
 exports('GetInterface', () => {
