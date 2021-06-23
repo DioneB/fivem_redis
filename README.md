@@ -1,6 +1,6 @@
 <h1 align="center">
 
-![Banner](https://i.imgur.com/NDok.png)
+![Banner](https://raw.githubusercontent.com/Santagain/fivem_redis/main/redis_logo.png)
 
 </h1>
 
