@@ -23,22 +23,18 @@ How to use FiveM_Redis API
 
 local Cache = exports.fivem_redis:GetInterface();
 
-
 [[Methods]]
 
 -- Save data on Redis Cache
 Cache.Save(key, value)
-
 
 -- Get data from Redis Cache
 Cache.GetCache(key, function(result)
   print(result)
 end)
 
-
 -- Remove data with informed key from Redis Cache
 Cache.Invalidate(key)
-
 
 -- Invalidate all data with informed prefix from Redis Cache
 Cache.InvalidatePrefix(prefix, function(result)
