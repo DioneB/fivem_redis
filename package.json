@@ -1,5 +1,5 @@
 {
-  "name": "cronus-redis",
+  "name": "fivem-redis",
   "version": "1.0.0",
   "main": "server/node.js",
   "dependencies": {
