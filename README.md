@@ -41,6 +41,15 @@ Cache.InvalidatePrefix(prefix, function(result)
   print(result)
 end)
 
+
+-- Save an Sorted Data | (key,data - [array])
+Cache.ZAdd("sortedSet",{1, "um", 2, "dois", 4, "quatro", 3, "três"})
+
+-- Get an Saved Sorted Data | (key,range_min,range_max,arg)
+Cache.ZRange("sortedSet", 0, 2, "WITHSCORES", function(result)
+  print(result)
+end)
+
 ```
 
 
