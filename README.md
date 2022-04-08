@@ -48,6 +48,7 @@ Cache.ZAdd("sortedSet",{1, "um", 2, "dois", 4, "quatro", 3, "três"})
 -- Get an Saved Sorted Data | (key,range_min,range_max,arg)
 Cache.ZRange("sortedSet", 0, 2, "WITHSCORES", function(result)
   print(result)
+  -- ["um", "1", "dois", "2", "três", "3"] como se o comando fosse `redis> ZRANGE sortedSet 0 2 WITHSCORES`
 end)
 
 ```
