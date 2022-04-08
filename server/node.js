@@ -12,7 +12,8 @@ function Callback(cb, ...args) {
   else return false;
 }
 
-function SaveCache(key, value) {
+function SaveCache(key, value,expires) {
+  expires => Redis.set(key, JSON.stringify(value), 'EX', expires);
   return Redis.set(key, JSON.stringify(value));
 }
 
