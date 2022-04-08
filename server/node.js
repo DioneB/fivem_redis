@@ -17,6 +17,15 @@ function SaveCache(key, value,expires) {
   return Redis.set(key, JSON.stringify(value));
 }
 
+function SaveSorted(key,data) {
+  return Redis.zadd(key,...data)
+}
+
+async function GetSorted(key,rangeMin,rangeMax,arg,cb) {
+  const data = await Redis.zrange(key,rangeMin,rangeMax,arg);
+  Callback(cb, data ? JSON.parse(data) : null);
+}
+
 async function GetCache(key, cb) {
   const data = await Redis.get(key);
   Callback(cb, data ? JSON.parse(data) : null);
@@ -38,12 +47,16 @@ async function InvalidatePrefixCache(prefix, cb) {
 
 let Cache = {};
 Cache.Save = SaveCache;
+Cache.ZAdd = SaveSorted;
 Cache.Invalidate = InvalidateCache;
 Cache.Get = (key, cb) => {
   return GetCache(key, cb);
 };
 Cache.GetAll = (cb) => {
   return GetAllCache(cb);
+};
+Cache.ZRange = (key,rangeMin,rangeMax,arg,cb) => {
+  return GetSorted(key,rangeMin,rangeMax,arg,cb);
 };
 Cache.InvalidatePrefix = (prefix, cb) => {
   return InvalidatePrefixCache(prefix, cb);
