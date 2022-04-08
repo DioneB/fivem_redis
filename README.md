@@ -25,8 +25,8 @@ local Cache = exports.fivem_redis:GetInterface();
 
 [[Methods]]
 
--- Save data on Redis Cache
-Cache.Save(key, value)
+-- Save data on Redis Cache | if not "expire_time" passed they will persistent
+Cache.Save(key, value,expire_time)
 
 -- Get data from Redis Cache
 Cache.Get(key, function(result)
