@@ -1,8 +1,8 @@
 {
   "name": "fivem-redis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "server/node.js",
   "dependencies": {
-    "ioredis": "^4.27.3"
+   "ioredis": "^5.x.x"
   }
 }
