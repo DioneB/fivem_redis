@@ -29,7 +29,7 @@ local Cache = exports.fivem_redis:GetInterface();
 Cache.Save(key, value)
 
 -- Get data from Redis Cache
-Cache.GetCache(key, function(result)
+Cache.Get(key, function(result)
   print(result)
 end)
 
