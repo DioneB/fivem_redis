@@ -52,12 +52,15 @@ Cache.Invalidate = InvalidateCache;
 Cache.Get = (key, cb) => {
   return GetCache(key, cb);
 };
+
 Cache.GetAll = (cb) => {
   return GetAllCache(cb);
 };
+
 Cache.ZRange = (key,rangeMin,rangeMax,arg,cb) => {
   return GetSorted(key,rangeMin,rangeMax,arg,cb);
 };
+
 Cache.InvalidatePrefix = (prefix, cb) => {
   return InvalidatePrefixCache(prefix, cb);
 };
