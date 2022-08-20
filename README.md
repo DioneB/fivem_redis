@@ -14,6 +14,10 @@
   <a href="#Contribute">Contribute</a>
 </p>
 
+## vRP Version
+
+[vRP Version](https://github.com/Santagain/vrp_redis)
+
 ## API
 
 How to use FiveM_Redis API
